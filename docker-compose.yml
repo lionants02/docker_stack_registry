@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
 
-  registy:
+  registry:
     image: registry:2
     ports:
       - "5000:5000"

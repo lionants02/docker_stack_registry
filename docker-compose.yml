@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+
+  registy:
+    image: registry:2
+    ports:
+      - "5000:5000"
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.mongo.role == frontend
